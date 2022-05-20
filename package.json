@@ -1,0 +1,33 @@
+{
+  "name": "cse341finalproject",
+  "version": "1.0.0",
+  "description": "cse 341 final project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "nodemon server.js",
+    "swagger": "node ./swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cermy1995/cse341FinalProject.git"
+  },
+  "author": "Adam Finder, Cami Wallace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cermy1995/cse341FinalProject/issues"
+  },
+  "homepage": "https://github.com/cermy1995/cse341FinalProject#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "mongodb": "^4.6.0",
+    "swagger-ui-express": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "^2.21.1"
+  }
+}
