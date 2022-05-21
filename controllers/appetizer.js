@@ -4,13 +4,13 @@ const {postSchema} = require('../helpers/recipeSchemaValidation');
 const {putSchema} = require('../helpers/recipeSchemaValidation');
 
 
-//function for getting all main course recipe records from mongodb
+//function for getting all appetizer course recipe records from mongodb
 const getAllRecipes = async (req, res, next) => {
   try{
     const payload = await mongodb
     .getDb()
     .db()
-    .collection('main')
+    .collection('appetizer')
     .find();
     payload.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
@@ -18,7 +18,7 @@ const getAllRecipes = async (req, res, next) => {
     });
     console.log(payload);
   } catch (error) {
-    res.status(400).json(res.error || 'An error occured fetching main course recipes.');
+    res.status(400).json(res.error || 'An error occured fetching appetizer course recipes.');
   }
     
 };
@@ -30,7 +30,7 @@ const getSingleRecipe = async (req, res, next) => {
     const payload = await mongodb
     .getDb()
     .db()
-    .collection('main')
+    .collection('appetizer')
     //possibly find by recipe name instead.
     .find({ _id: recordId});
     payload.toArray().then((lists) => {
@@ -52,7 +52,7 @@ const createRecipe = async (req, res) => {
     const response = await mongodb
         .getDb()
         .db()
-        .collection('main')
+        .collection('appetizer')
         .insertOne(recipe);
     if (response.acknowledged) {
         res.status(201).json(response);
@@ -73,7 +73,7 @@ const updateRecipe = async (req, res) => {
     const response = await mongodb
       .getDb()
       .db()
-      .collection('main')
+      .collection('appetizer')
       .replaceOne({ _id: recordId }, recipeRecord);
     console.log(response);
     if (response.modifiedCount > 0) {
@@ -94,7 +94,7 @@ const updateRecipe = async (req, res) => {
       const response = await mongodb
           .getDb()
           .db()
-          .collection('main')
+          .collection('appetizer')
           .remove({ _id: recordId }, true);
       console.log(response);
       if (response.deletedCount > 0) {
