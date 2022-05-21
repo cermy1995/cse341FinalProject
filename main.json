@@ -1,0 +1,11 @@
+{
+    "main": {
+        "title": "test",
+        "ingredients": "testing",
+        "directions": "test directions",
+        "dateAdded": "01/01/2020",
+        "dateModified": "02/02/2020",
+        "author": "Adam Finder",
+        "neededUtensils": "A singular whisk."
+    }
+}

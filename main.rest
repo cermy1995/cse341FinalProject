@@ -1,0 +1,85 @@
+//Localhost All
+###
+GET http://localhost:8080/contacts 
+###
+
+//Localhost singular
+GET http://localhost:8080/contacts/62649c3be49008ab026b3079
+###
+GET http://localhost:8080/contacts/62649c3be49008ab026b307a
+###
+GET http://localhost:8080/contacts/62649c3be49008ab026b307b
+
+//Localhost Create
+###
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    
+}
+
+//Localhost Update
+###
+PUT http://localhost:8080/contacts/62649c3be49008ab026b307b HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Justin",
+    "lastName":"Murn",
+    "email":"Justin@fakeemail.com",
+    "favoriteColor":"Orange",
+    "birthday":"09/27/1966"    
+}
+
+//Localhost Delete
+###
+DELETE http://localhost:8080/contacts/6269f952090c8fae77c87737 HTTP/1.1
+
+
+
+
+//Heroku APP All
+###
+GET https://cse341adam.herokuapp.com/contacts
+###
+
+//Heroku APP singular
+GET https://cse341adam.herokuapp.com/contacts/62649c3be49008ab026b3079
+###
+
+GET https://cse341adam.herokuapp.com/contacts/62649c3be49008ab026b307a
+###
+
+GET https://cse341adam.herokuapp.com/contacts/62649c3be49008ab026b307b
+###
+
+//Heroku APP Create
+###
+POST https://cse341adam.herokuapp.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Rob",
+    "lastName":"Finder",
+    "email":"Rob@fakeemail.com",
+    "favoriteColor":"Purple",
+    "birthday":"03/13/1966"
+}
+
+//Heroku APP Update
+###
+PUT https://cse341adam.herokuapp.com/contacts/62649c3be49008ab026b307b HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Justin",
+    "lastName":"Murn",
+    "email":"Justin@fakeemail.com",
+    "favoriteColor":"Orange",
+    "birthday":"09/27/1966"    
+}
+
+//Heroku APP Delete
+###
+DELETE https://cse341adam.herokuapp.com/contacts/6269ff564cfc03cc753a3667
