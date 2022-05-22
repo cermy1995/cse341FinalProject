@@ -5,8 +5,8 @@ const doc = {
     title: 'Not Your Grandmas Cookbook',
     description: 'Cookbook API',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'cse341finalproject.herokuapp.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';

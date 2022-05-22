@@ -1,22 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
-const appetizerController = require('../controllers/main');
+const appetizerController = require('../controllers/appetizer');
 
 //Get routes
-router.get('/', appetizerController.getAllRecipes);
+router.get('/', appetizerController.getAllAppetizer);
 
 //maybe search by name instead?
-router.get('/:id', appetizerController.getSingleRecipe);
+router.get('/:id', appetizerController.getSingleAppetizer);
 
 //POST routes to create a new contact
-router.post('/', appetizerController.createRecipe);
+router.post('/', appetizerController.createAppetizer);
 
 //PUT routes to update a contact
-router.put('/:id', appetizerController.updateRecipe);
+router.put('/:id', appetizerController.updateAppetizer);
 
 //Delete route for removing a contact
-router.delete('/:id', appetizerController.deleteRecipe);
+router.delete('/:id', appetizerController.deleteAppetizer);
 
 module.exports = router;
 

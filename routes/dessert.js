@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const dessertController = require('../controllers/main');
+const dessertController = require('../controllers/dessert');
 
 //Get routes
 router.get('/', dessertController.getAllRecipes);

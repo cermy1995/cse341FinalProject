@@ -5,7 +5,7 @@ const {putSchema} = require('../helpers/recipeSchemaValidation');
 
 
 //function for getting all appetizer course recipe records from mongodb
-const getAllRecipes = async (req, res, next) => {
+const getAllAppetizer = async (req, res, next) => {
   try{
     const payload = await mongodb
     .getDb()
@@ -24,7 +24,7 @@ const getAllRecipes = async (req, res, next) => {
 };
 
 //Possibly search for a list of recipes that match a keyword?
-const getSingleRecipe = async (req, res, next) => {
+const getSingleAppetizer = async (req, res, next) => {
   try{
     const recordId = new ObjectId(req.params.id);
     const payload = await mongodb
@@ -44,29 +44,30 @@ const getSingleRecipe = async (req, res, next) => {
 };
 
 //function for createing a new recipe record
-const createRecipe = async (req, res) => {
+const createAppetizer = async (req, res) => {
   try{
-    const recipe = await postSchema.validateAsync(req.body);
+    console.log("starting db connection");
+    const appetizer = await postSchema.validateAsync(req.body);
     console.log("made it here!");
     console.log(req.body);
     const response = await mongodb
         .getDb()
         .db()
         .collection('appetizer')
-        .insertOne(recipe);
+        .insertOne(appetizer);
     if (response.acknowledged) {
         res.status(201).json(response);
     } else {
-        res.status(500).json(response.error || 'An Error has occurred creating new recipe record.');
+        res.status(500).json(response.error || 'An Error has occurred creating new Appetizer recipe record.');
     }
   } catch(error) {
-    res.status(400).json(res.error || 'An Error has occurred creating new recipe record. Please check required fields.');
+    res.status(400).json(res.error || 'An Error has occurred creating Appetizer new recipe record. Please check required fields.');
   }
     
 };
 
 //function for updating a current cattle record
-const updateRecipe = async (req, res) => {
+const updateAppetizer = async (req, res) => {
   try{
     const recordId = new ObjectId(req.params.id);
     const recipeRecord = await putSchema.validateAsync(req.body);
@@ -79,16 +80,16 @@ const updateRecipe = async (req, res) => {
     if (response.modifiedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the record.');
+      res.status(500).json(response.error || 'Some error occurred while updating the Appetizer record.');
     }
   } catch (error) {
-    res.status(400).json(res.error || 'An error occurred attempting to update recipe record. Please check your Record Id, and that current date is included.');
+    res.status(400).json(res.error || 'An error occurred attempting to update Appetizer recipe record. Please check your Record Id, and that current date is included.');
   }
     
   };
 
   //function to delete a single recipe record via Id
-  const deleteRecipe = async (req, res) => {
+  const deleteAppetizer = async (req, res) => {
     try{
       const recordId = new ObjectId(req.params.id);
       const response = await mongodb
@@ -100,19 +101,19 @@ const updateRecipe = async (req, res) => {
       if (response.deletedCount > 0) {
         res.status(204).send();
       } else {
-        res.status(500).json(response.error || 'An error occured attempting to delete recipe record.');
+        res.status(500).json(response.error || 'An error occured attempting to delete Appetizer recipe record.');
       }
     } catch(error) {
-      res.status(400).json(res.error || 'An error occured attempting to delete recipe record. Please check your record Id.');
+      res.status(400).json(res.error || 'An error occured attempting to delete Appetizer recipe record. Please check your record Id.');
     }
     
   };
 
 
 module.exports = {
-    getAllRecipes, 
-    getSingleRecipe,
-    createRecipe,
-    updateRecipe,
-    deleteRecipe
+    getAllAppetizer, 
+    getSingleAppetizer,
+    createAppetizer,
+    updateAppetizer,
+    deleteAppetizer
 };

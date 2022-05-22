@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-
 //schema for post endpoint
 const postSchema = Joi.object({
     title: Joi.string().lowercase().required(),
@@ -21,3 +20,8 @@ const putSchema = Joi.object({
     author: Joi.string(),
     neededUtensils: Joi.string()
 })
+
+module.exports = {
+    postSchema,
+    putSchema
+}
