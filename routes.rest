@@ -1,17 +1,18 @@
 // LOCALHOST ### 
 //Local test for user api
-GET http://localhost:8080/user
 ### 
 GET http://localhost:8080/user (add id here)
 ### 
-POST http://localhost:8080/user HTTP/1.1 content-type: application/json
+POST http://localhost:8080/user HTTP/1.1
+content-type: application/json
 {
-"name": "Granny Smith",
-"email": "recipe@test.com",
-"thirdPartyLink": "onlinerecipe.com"
+    "name": "Granny Smith",
+    "email": "recipe@test.com",
+    "thirdPartyLink": "onlinerecipe.com"
 }
 ### 
-PUT http://localhost:8080/user (add id here) HTTP/1.1 content-type: application/json
+PUT http://localhost:8080/user (add id here) HTTP/1.1 
+content-type: application/json
 {
 "name": "Fran Smith",
 "email": "recipe2@test.com",
@@ -26,7 +27,8 @@ GET http://localhost:8080/main
 ### 
 GET http://localhost:8080/main/62898513221ab3037d619bdb
 ### 
-POST http://localhost:8080/main HTTP/1.1 content-type: application/json
+POST http://localhost:8080/main HTTP/1.1
+content-type: application/json
 {
 "title": "Roast",
         "ingredients": "roast, beef bulion, french oinion soup mix",
@@ -37,7 +39,8 @@ POST http://localhost:8080/main HTTP/1.1 content-type: application/json
         "neededUtensils": "crock pot"
 }
 ### 
-PUT http://localhost:8080/main/62898513221ab3037d619bdb HTTP/1.1 content-type: application/json
+PUT http://localhost:8080/main/62898513221ab3037d619bdb HTTP/1.1
+content-type: application/json
 {
         "title": "Roast Beef",
         "ingredients": "roast, beef bulion, french oinion soup mix, garlic powder",
@@ -51,7 +54,8 @@ GET http://localhost:8080/appetizer
 ### 
 GET http://localhost:8080/appetizer/62896b0fbf1d59c192d52795
 ### 
-POST http://localhost:8080/appetizer HTTP/1.1 content-type: application/json
+POST http://localhost:8080/appetizer HTTP/1.1  
+content-type: application/json
 {
         "title": "fruit skewer",
         "ingredients": "your choice of mixed fruit",

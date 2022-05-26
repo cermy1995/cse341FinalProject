@@ -89,7 +89,26 @@
     "/users/": {
       "post": {
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+             "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "thirdPartyLink": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+        ],
         "responses": {
           "201": {
             "description": "Created"
