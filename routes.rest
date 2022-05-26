@@ -1,0 +1,198 @@
+// LOCALHOST ### 
+//Local test for user api
+GET http://localhost:8080/user
+### 
+GET http://localhost:8080/user (add id here)
+### 
+POST http://localhost:8080/user HTTP/1.1 content-type: application/json
+{
+"name": "Granny Smith",
+"email": "recipe@test.com",
+"thirdPartyLink": "onlinerecipe.com"
+}
+### 
+PUT http://localhost:8080/user (add id here) HTTP/1.1 content-type: application/json
+{
+"name": "Fran Smith",
+"email": "recipe2@test.com",
+"thirdPartyLink": "onlinerecipe.com"
+}
+### 
+DELETE http://localhost:8080/user (add id here)
+
+//local test for main api
+### 
+GET http://localhost:8080/main
+### 
+GET http://localhost:8080/main/62898513221ab3037d619bdb
+### 
+POST http://localhost:8080/main HTTP/1.1 content-type: application/json
+{
+"title": "Roast",
+        "ingredients": "roast, beef bulion, french oinion soup mix",
+        "directions": "stick it all in a crock pot on low",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "mr. mcMan",
+        "neededUtensils": "crock pot"
+}
+### 
+PUT http://localhost:8080/main/62898513221ab3037d619bdb HTTP/1.1 content-type: application/json
+{
+        "title": "Roast Beef",
+        "ingredients": "roast, beef bulion, french oinion soup mix, garlic powder",
+        "dateModified": "03/15/2015"
+}
+### 
+DELETE  http://localhost:8080/main/62898513221ab3037d619bdb 
+
+//local test for appetizer api
+GET http://localhost:8080/appetizer
+### 
+GET http://localhost:8080/appetizer/62896b0fbf1d59c192d52795
+### 
+POST http://localhost:8080/appetizer HTTP/1.1 content-type: application/json
+{
+        "title": "fruit skewer",
+        "ingredients": "your choice of mixed fruit",
+        "directions": "put fruit on skewer",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "starbright",
+        "neededUtensils": "skewers"
+}
+### 
+PUT http://localhost:8080/appetizer/62896b0fbf1d59c192d52795  HTTP/1.1 content-type: application/json
+{
+        "title": "veggie skewer",
+        "ingredients": "your choice of vegitables",
+        "dateModified": "03/15/2015"
+}
+### 
+DELETE http://localhost:8080/appetizer/62896b0fbf1d59c192d52795
+
+//local test for dessert api
+GET http://localhost:8080/dessert
+### 
+GET http://localhost:8080/dessert/628981a5c70080276a182a3b
+### 
+POST http://localhost:8080/dessert HTTP/1.1 content-type: application/json
+{
+"title": "jello",
+        "ingredients": "Jello-packet, water",
+        "directions": "Heat on stove, mix togther, cool in fridge",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "Mr. Jello",
+        "neededUtensils": "Heat, pan, spoon"
+}
+### 
+PUT http://localhost:8080/dessert/628981a5c70080276a182a3b HTTP/1.1 content-type: application/json
+{
+        "title": "jello",
+        "ingredients": "Jello-packet, water, sugar",
+        "dateModified": "03/15/2015"
+}
+### 
+DELETE http://localhost:8080/dessert/628981a5c70080276a182a3b
+
+
+
+
+//PRODUCTION Deploy 
+### 
+//production test for user api
+GET https://cse341finalproject.herokuapp.com/user (add id here)
+### 
+POST https://cse341finalproject.herokuapp.com/user HTTP/1.1 content-type: application/json
+    {
+        "name": "Granny Smith",
+        "email": "recipe@test.com",
+        "thirdPartyLink": "onlinerecipe.com"
+    }
+### 
+PUT https://cse341finalproject.herokuapp.com/user (add id here) HTTP/1.1 content-type: application/json
+    {
+        "name": "Fran Smith",
+        "email": "recipe2@test.com",
+        "thirdPartyLink": "onlinerecipe.com"
+    }
+### 
+DELETE https://cse341finalproject.herokuapp.com/user (add id here)
+
+
+//production deploy for main api
+### 
+GET https://cse341finalproject.herokuapp.com/main
+### 
+GET https://cse341finalproject.herokuapp.com/main/62898513221ab3037d619bdb
+### 
+POST https://cse341finalproject.herokuapp.com/main HTTP/1.1 content-type: application/json
+    {
+       "title": "Roast",
+        "ingredients": "roast, beef bulion, french oinion soup mix",
+        "directions": "stick it all in a crock pot on low",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "mr. mcMan",
+        "neededUtensils": "crock pot"
+}
+
+### 
+PUT https://cse341finalproject.herokuapp.com/main/62898513221ab3037d619bdb HTTP/1.1 content-type: application/json
+    {
+        "author": "Mrs. Jello",
+    }
+### 
+DELETE https://cse341finalproject.herokuapp.com/main/62898513221ab3037d619bdb
+
+//producation test for appetizer api
+### 
+GET https://cse341finalproject.herokuapp.com/appetizer
+### 
+GET https://cse341finalproject.herokuapp.com/appetizer/62896b0fbf1d59c192d52795
+### 
+POST https://cse341finalproject.herokuapp.com/appetizer HTTP/1.1 content-type: application/json
+{
+        "title": "fruit skewer",
+        "ingredients": "your choice of mixed fruit",
+        "directions": "put fruit on skewer",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "starbright",
+        "neededUtensils": "skewers"
+}
+### 
+PUT https://cse341finalproject.herokuapp.com/appetizer/62896b0fbf1d59c192d52795  HTTP/1.1 content-type: application/json
+{
+        "title": "veggie skewer",
+        "ingredients": "your choice of vegitables",
+        "dateModified": "03/15/2015"
+}
+### 
+DELETE https://cse341finalproject.herokuapp.com/appetizer/62896b0fbf1d59c192d52795
+
+//production test for dessert api
+GET https://cse341finalproject.herokuapp.com/dessert
+### 
+GET https://cse341finalproject.herokuapp.com/dessert/628981a5c70080276a182a3b
+### 
+POST https://cse341finalproject.herokuapp.com/dessert HTTP/1.1 content-type: application/json
+{
+"title": "jello",
+        "ingredients": "Jello-packet, water",
+        "directions": "Heat on stove, mix togther, cool in fridge",
+        "dateAdded": "03/10/2012",
+        "dateModified": "03/10/2012",
+        "author": "Mr. Jello",
+        "neededUtensils": "Heat, pan, spoon"
+}
+### 
+PUT https://cse341finalproject.herokuapp.com/dessert/628981a5c70080276a182a3b HTTP/1.1 content-type: application/json
+{
+        "title": "jello",
+        "ingredients": "Jello-packet, water, sugar",
+        "dateModified": "03/15/2015"
+}
+### 
+DELETE https://cse341finalproject.herokuapp.com/dessert/628981a5c70080276a182a3b
