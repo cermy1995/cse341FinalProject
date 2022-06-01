@@ -59,7 +59,25 @@
             "in": "path",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "thirdPartyLink": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
         ],
         "responses": {
           "204": {
@@ -226,7 +244,37 @@
             "in": "path",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "ingredients": {
+                  "example": "any"
+                },
+                "directions": {
+                  "example": "any"
+                },
+                "dateAdded": {
+                  "example": "any"
+                },
+                "dateModified": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "neededUtensils": {
+                  "example": "any"
+                }
+                }
+                }
+              }
         ],
         "responses": {
           "204": {
@@ -357,7 +405,37 @@
             "in": "path",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "ingredients": {
+                  "example": "any"
+                },
+                "directions": {
+                  "example": "any"
+                },
+                "dateAdded": {
+                  "example": "any"
+                },
+                "dateModified": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "neededUtensils": {
+                  "example": "any"
+                }
+                }
+                }
+              }
         ],
         "responses": {
           "204": {
@@ -487,7 +565,37 @@
             "in": "path",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "ingredients": {
+                  "example": "any"
+                },
+                "directions": {
+                  "example": "any"
+                },
+                "dateAdded": {
+                  "example": "any"
+                },
+                "dateModified": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "neededUtensils": {
+                  "example": "any"
+                }
+                }
+                }
+              }
         ],
         "responses": {
           "204": {
