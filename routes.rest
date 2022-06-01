@@ -1,7 +1,7 @@
 // LOCALHOST ### 
 //Local test for user api
 ### 
-GET http://localhost:8080/user (add id here)
+GET http://localhost:8080/user/628ee11e1fce7fa26fb27fc2
 ### 
 POST http://localhost:8080/user HTTP/1.1
 content-type: application/json
@@ -11,7 +11,7 @@ content-type: application/json
     "thirdPartyLink": "onlinerecipe.com"
 }
 ### 
-PUT http://localhost:8080/user (add id here) HTTP/1.1 
+PUT http://localhost:8080/user/628ee11e1fce7fa26fb27fc2 HTTP/1.1 
 content-type: application/json
 {
 "name": "Fran Smith",
@@ -19,7 +19,7 @@ content-type: application/json
 "thirdPartyLink": "onlinerecipe.com"
 }
 ### 
-DELETE http://localhost:8080/user (add id here)
+DELETE http://localhost:8080/user/628ee11e1fce7fa26fb27fc2
 
 //local test for main api
 ### 
@@ -106,7 +106,7 @@ DELETE http://localhost:8080/dessert/628981a5c70080276a182a3b
 //PRODUCTION Deploy 
 ### 
 //production test for user api
-GET https://cse341finalproject.herokuapp.com/user (add id here)
+GET https://cse341finalproject.herokuapp.com/user/628ee11e1fce7fa26fb27fc2
 ### 
 POST https://cse341finalproject.herokuapp.com/user HTTP/1.1 content-type: application/json
     {
@@ -115,14 +115,14 @@ POST https://cse341finalproject.herokuapp.com/user HTTP/1.1 content-type: applic
         "thirdPartyLink": "onlinerecipe.com"
     }
 ### 
-PUT https://cse341finalproject.herokuapp.com/user (add id here) HTTP/1.1 content-type: application/json
+PUT https://cse341finalproject.herokuapp.com/user/628ee11e1fce7fa26fb27fc2 HTTP/1.1 content-type: application/json
     {
         "name": "Fran Smith",
         "email": "recipe2@test.com",
         "thirdPartyLink": "onlinerecipe.com"
     }
 ### 
-DELETE https://cse341finalproject.herokuapp.com/user (add id here)
+DELETE https://cse341finalproject.herokuapp.com/user/628ee11e1fce7fa26fb27fc2
 
 
 //production deploy for main api
