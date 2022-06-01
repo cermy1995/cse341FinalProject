@@ -5,6 +5,16 @@
     "description": "Cookbook API",
     "version": "1.0.0"
   },
+  "securityDefinitions": {
+    "oauth": {
+      "type": "oauth2",
+      "authorizationUrl": "cse341finalproject.herokuapp.com/api-docs",
+      "flow": "implicit",
+      "scopes": {}
+  }
+  },
+    "security": {},
+    "paths": {},
   "host": "cse341finalproject.herokuapp.com",
   "basePath": "/",
   "schemes": [
